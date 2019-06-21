@@ -1,0 +1,2 @@
+# Django_Web_Mini_Proj
+基于Django框架的网页编写学习
