@@ -3,4 +3,4 @@
 进入项目目录后，创建app模块：
 	python manage.py startapp app_name
 运行项目：
-	python manage.py runserver 127.0.0.1:8000（ip地址填0.0.0.0，监听本机ip）
+	python manage.py runserver 127.0.0.1:8000（ip地址填0.0.0.0，则监听本机ip）
