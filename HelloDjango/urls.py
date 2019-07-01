@@ -19,4 +19,5 @@ from cmdb import views
 
 urlpatterns = [
     path('index/', views.index),
+    path('home/', views.home),
 ]

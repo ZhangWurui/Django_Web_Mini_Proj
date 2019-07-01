@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>张鎢睿的词云博客</title>
+	<link rel="stylesheet" href="/static/css/home.css">
+	<script src="/static/js/jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h2 class="name">ZhangWurui</h2>
+		</div>
+		<div class="btns">
+			<button class="btn" id="btn_home">首页</button>
+			<button class="btn" id="btn_202">202群词云</button>
+			<button class="btn" id="btn_study">学习群词云</button>
+			<button class="btn" id="btn_zzt">zzt词云</button>
+			<button class="btn" id="btn_miao">miao词云</button>
+		</div>
+		<img id="imgshow" src="">
+	</body>
+	<script type="text/javascript">
+		$("#btn_home").click(function(){
+			$("#imgshow").attr('src'," ");
+		})
+		$("#btn_202").click(function(){
+			$("#imgshow").attr('src',"/static/imgs/202.png");
+		})
+		$("#btn_study").click(function(){
+			$("#imgshow").attr('src',"/static/imgs/study.png");
+		})
+		$("#btn_zzt").click(function(){
+			$("#imgshow").attr('src',"/static/imgs/zzt.png");
+		})
+		$("#btn_miao").click(function(){
+			$("#imgshow").attr('src',"/static/imgs/miao.png");
+		})
+	</script>
+</html>
