@@ -25,7 +25,7 @@ SECRET_KEY = 'an%p1*76(*hkv0#shnqt8g3ijejeufyp7svh5m&hluc&1)!@yn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['10.24.47.154','192.168.43.103','47.101.203.187','www.zhangwurui.cn']
+ALLOWED_HOSTS = ['10.24.47.154','192.168.43.103','47.101.203.187','www.zhangwurui.cn','127.0.0.1']
 
 
 # Application definition

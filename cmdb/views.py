@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
 # Create your views here.
 from cmdb import models
 
@@ -16,3 +16,6 @@ def index(request):
 
 def home(request):
     return render(request, "home.html")
+
+def goHome(request):
+    return HttpResponseRedirect("/home/")
