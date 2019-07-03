@@ -47,7 +47,7 @@ body {
 }
 
 .btn:hover {
-  color: rgba(161, 161, 161, 1.0);
+  color: rgb(229, 226, 226);
   background-color: rgba(0, 31, 206, 0.7);
   font-weight: bold;
 }
