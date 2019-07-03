@@ -41,13 +41,13 @@ body {
 .btn_activate {
   margin: 2px;
   color: rgb(229, 226, 226);
-  background-color: rgb(0, 31, 206);
+  background-color: rgba(0, 31, 206, 0.7);
   width: 20%;
 }
 
 .btn:hover {
   color: rgb(161, 161, 161);
-  background-color: rgb(0, 31, 206);
+  background-color: rgba(0, 31, 206, 0.7);
 }
 
 .welcome_text {
