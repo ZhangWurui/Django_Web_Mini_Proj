@@ -28,7 +28,6 @@ body {
   display: flex;
   flex-direction: row;
   height: 60px;
-  background-color: rgba(6, 164, 255, 0.5);
   justify-content:space-between;
 }
 
@@ -42,13 +41,13 @@ body {
 .btn_activate {
   margin: 2px;
   color: rgb(229, 226, 226);
-  background-color: rgb(0, 22, 145);
+  background-color: rgb(0, 31, 206);
   width: 20%;
 }
 
 .btn:hover {
   color: rgb(161, 161, 161);
-  background-color: rgb(0, 22, 145);
+  background-color: rgb(0, 31, 206);
 }
 
 .welcome_text {
