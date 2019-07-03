@@ -1,8 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
   justify-content: center;
   background: url("/static/imgs/backgroud/001.jpg") repeat-y;
 }
@@ -43,11 +43,13 @@ body {
   color: rgb(229, 226, 226);
   background-color: rgba(0, 31, 206, 0.7);
   width: 20%;
+  font-weight: bold;
 }
 
 .btn:hover {
-  color: rgb(161, 161, 161);
+  color: rgba(161, 161, 161, 1.0);
   background-color: rgba(0, 31, 206, 0.7);
+  font-weight: bold;
 }
 
 .welcome_text {
