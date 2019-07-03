@@ -28,14 +28,21 @@ body {
   display: flex;
   flex-direction: row;
   height: 60px;
-  background-color: rgb(6, 164, 255);
+  background-color: rgba(6, 164, 255, 0.5);
   justify-content:space-between;
 }
 
 .btn {
   margin: 2px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(26, 94, 243);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(26, 94, 243, 0.7);
+  width: 20%;
+}
+
+.btn_activate {
+  margin: 2px;
+  color: rgb(229, 226, 226);
+  background-color: rgb(0, 22, 145);
   width: 20%;
 }
 
@@ -44,13 +51,18 @@ body {
   background-color: rgb(0, 22, 145);
 }
 
-.btn:visited {
-  color: rgb(161, 161, 161);
-  background-color: rgb(0, 22, 145);
+.welcome_text {
+  height: 400px;
+  width: 80%;
+  line-height: 350px;
+  font-size: 35px;
+  text-align: center;
+  background-color: rgba(0, 215, 253, 0.3);
+  color: rgb(211, 231, 248);
+  border-radius: 8px;
 }
 
-#imgshow {
-  margin-left: 20%;
-  height: 410px;
-  width: 635px;
+.center_box {
+  display: flex;
+  justify-content: center;
 }

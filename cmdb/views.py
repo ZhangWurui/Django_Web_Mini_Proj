@@ -13,9 +13,14 @@ def index(request):
     user_list = models.UserInfo.objects.all()
     return render(request, "index.html",{"data":user_list})
 
-
 def home(request):
-    return render(request, "home.html")
+    return HttpResponseRedirect("/home/")
 
 def goHome(request):
-    return HttpResponseRedirect("/home/")
+    return render(request, "home.html")
+
+def worldCloud(request):
+    return HttpResponseRedirect("/worldcloud/")
+
+def goWorldCloud(request):
+    return render(request, "worldcloud.html")
