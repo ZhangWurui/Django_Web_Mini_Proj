@@ -24,3 +24,9 @@ def worldCloud(request):
 
 def goWorldCloud(request):
     return render(request, "worldcloud.html")
+
+def filmreview(request):
+    return HttpResponseRedirect("/filmreview/")
+
+def goFilmReview(request):
+    return render(request, "filmreview.html")

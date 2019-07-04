@@ -21,6 +21,11 @@ urlpatterns = [
     path('index/', views.index),
     path('', views.home),
     path('home/', views.goHome),
+
     path('home/worldcloud/', views.worldCloud),
     path('worldcloud/', views.goWorldCloud),
+
+    path('home/filmreview/', views.filmreview),
+    path('filmreview/', views.goFilmReview),
+    
 ]

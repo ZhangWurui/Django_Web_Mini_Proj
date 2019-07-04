@@ -14,9 +14,9 @@
 			<h2 class="name">Zhang Wurui</h2>
 		</div>
 		<div class="btns">
-			<button class="btn_activate" id="btn_0">首页</button>
+			<button class="btn" id="btn_0">首页</button>
 			<button class="btn" id="btn_1">词云</button>
-			<button class="btn" id="btn_2">影评</button>
+			<button class="btn_activate" id="btn_2">影评</button>
 			<button class="btn" id="btn_3">相册</button>
 			<button class="btn" id="btn_4">待定</button>
 		</div>
@@ -25,11 +25,11 @@
 		</div>
 	</body>
 	<script type="text/javascript">
+		$("#btn_0").click(function(){
+			self.location = "/home";
+		})
 		$("#btn_1").click(function(){
 			self.location = "/worldcloud";
-		})
-		$("#btn_2").click(function(){
-			self.location = "/filmreview";
 		})
 		$("#btn_3").click(function(){
 		})
