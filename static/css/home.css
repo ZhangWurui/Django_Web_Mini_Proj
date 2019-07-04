@@ -20,8 +20,9 @@ body {
 
 .name {
   color: rgba(0, 0, 0, 1.0);
-  margin-left: 15%;
+  margin-left: 10%;
   line-height: 180px;
+  font-family: 'DHF Dexsar Brush',sans-serif;
 }
 
 .btns {
@@ -75,4 +76,19 @@ body {
 .center_box {
   display: flex;
   justify-content: center;
+}
+
+@font-face { 
+  font-family: 'Django ITC Std';
+  src: url('../font/Django\ ITC\ Std.otf');
+}
+
+@font-face {
+  font-family: 'DHF Dexsar Brush';
+  src: url('../font/DHF\ Dexsar\ Brush.otf');
+}
+
+@font-face {
+  font-family: 'Santana Script';
+  src: url('../font/Santana\ Script.ttf');
 }
