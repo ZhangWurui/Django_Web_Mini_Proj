@@ -1,8 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   justify-content: center;
   background: url("/static/imgs/backgroud/001.jpg") repeat-y;
 }
