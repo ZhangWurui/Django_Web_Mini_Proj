@@ -18,7 +18,7 @@ from django.urls import path
 from cmdb import views
 from django.conf.urls import url
 from django.contrib import admin
-
+from . import handle_post 
 
 urlpatterns = [
     path('index/', views.index),
@@ -30,6 +30,8 @@ urlpatterns = [
 
     path('home/filmreview/', views.filmreview),
     path('filmreview/', views.goFilmReview),
+    path('filmreview/post', views.filmreview),
     url(r'^admin/', admin.site.urls),
+    url(r'^filmreview/post$', handle_post.filmreview_post),
     
 ]

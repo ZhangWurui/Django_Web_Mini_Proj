@@ -26,17 +26,14 @@ body {
 }
 
 .btns {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 15px 5px 15px 5px;
   display: flex;
   flex-direction: row;
-  height: 60px;
+  height: 5vh;
   justify-content:space-between;
   display: table;
   border-collapse: separate;
-  border-spacing: 3vh 0px;  /* 水平间距 垂直间距 */
+  border-spacing: 1vh 0px;  /* 水平间距 垂直间距 */
 }
 
 .mybtn {
@@ -92,6 +89,9 @@ body {
 .center_box {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  padding: 0% 18% 0% 18%;
+  align-content: center;
 }
 
 @font-face { 

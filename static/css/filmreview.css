@@ -1,0 +1,23 @@
+.submit_box {
+    padding: 2vh 40vh 0vh 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.submit_btn {
+    color: rgb(229, 226, 226);
+    background-color: rgba(36, 85, 248, 0.5);
+    border: 0.4vh solid rgba(66, 84, 255, 0.5);
+    font-size: 3vh;
+}
+
+.submit_btn:hover {
+    color: rgb(229, 226, 226);
+    background-color: rgba(0, 31, 206, 0.7);
+    font-weight: bold;
+    border: 2px solid rgba(0, 31, 206, 0.5);
+    font-size: 3.1vh;
+    box-shadow: 0 0 0.5vh 0.4vh rgb(0, 31, 206);
+  }
+  
