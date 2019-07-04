@@ -16,6 +16,9 @@ Including another URLconf
 from django.urls import path
 
 from cmdb import views
+from django.conf.urls import url
+from django.contrib import admin
+
 
 urlpatterns = [
     path('index/', views.index),
@@ -27,5 +30,6 @@ urlpatterns = [
 
     path('home/filmreview/', views.filmreview),
     path('filmreview/', views.goFilmReview),
+    url(r'^admin/', admin.site.urls),
     
 ]
