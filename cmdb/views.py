@@ -29,4 +29,7 @@ def filmreview(request):
     return HttpResponseRedirect("/filmreview/")
 
 def goFilmReview(request):
-    return render(request, "filmreview.html")
+    ctx = {}
+    with open( 'static/temp/temp.txt', mode='r', encoding='UTF-8') as f_in:
+        ctx['rlt'] = f_in.readlines()
+    return render(request, "filmreview.html", ctx)

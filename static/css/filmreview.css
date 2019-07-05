@@ -21,3 +21,7 @@
     box-shadow: 0 0 0.5vh 0.4vh rgb(0, 31, 206);
   }
   
+#show {
+    background-color: aliceblue;
+    margin-bottom: 5vh;
+}

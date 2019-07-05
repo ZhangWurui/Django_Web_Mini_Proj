@@ -30,8 +30,7 @@ urlpatterns = [
 
     path('home/filmreview/', views.filmreview),
     path('filmreview/', views.goFilmReview),
-    path('filmreview/post', views.filmreview),
+    path('filmreview/post', handle_post.filmreview_post),
     url(r'^admin/', admin.site.urls),
-    url(r'^filmreview/post$', handle_post.filmreview_post),
-    
+    # url(r'^filmreview/post$', handle_post.filmreview_post),
 ]
