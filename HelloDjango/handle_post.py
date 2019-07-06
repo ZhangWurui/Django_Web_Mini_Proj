@@ -10,6 +10,6 @@ def filmreview_post(request):
     if request.POST:
         ctx['rlt'] = request.POST['content']
         print(type(ctx['rlt']))
-        with open( 'static/temp/temp.txt', mode='w+', encoding='UTF-8') as f_out:
+        with open( 'static/temp/fr_001.txt', mode='w+', encoding='UTF-8') as f_out:
             f_out.write(ctx['rlt'])
     return render(request, "filmreview.html", ctx)

@@ -30,6 +30,6 @@ def filmreview(request):
 
 def goFilmReview(request):
     ctx = {}
-    with open( 'static/temp/temp.txt', mode='r', encoding='UTF-8') as f_in:
+    with open( 'static/temp/fr_001.txt', mode='r', encoding='UTF-8') as f_in:
         ctx['rlt'] = f_in.readlines()
     return render(request, "filmreview.html", ctx)
