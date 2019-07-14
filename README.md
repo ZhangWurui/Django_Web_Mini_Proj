@@ -18,3 +18,10 @@ Django命令行创建项目
 		python manage.py startapp app_name
 	运行项目：
 		python manage.py runserver 127.0.0.1:8000（ip地址填0.0.0.0，则监听本机ip；端口号填80，为默认端口号）
+
+Sqlite基本操作
+
+	将对models.py文件中的改动保存到当前目录中一个叫migrations的文件夹中:
+		python manage.py makemigrations
+	将改动同步到数据库:
+		python manage.py migrate

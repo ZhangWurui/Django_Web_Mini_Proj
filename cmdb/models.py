@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class UserInfo(models.Model):
-    user = models.CharField(max_length=32)
-    pwd = models.CharField(max_length=32)
+class FilmReview(models.Model):
+    id = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=50)
+    time = models.TextField()
+    content = models.TextField()
