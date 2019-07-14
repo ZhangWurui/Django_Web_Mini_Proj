@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-# Create your views here.
-from cmdb import models
+from cmdb.db_util import *
 
 # def index(request):
 #     if request.method == "POST":
@@ -29,7 +28,5 @@ def filmreview(request):
     return HttpResponseRedirect("/filmreview/")
 
 def goFilmReview(request):
-    ctx = {}
-    with open( 'static/temp/fr_001.txt', mode='r', encoding='UTF-8') as f_in:
-        ctx['rlt'] = f_in.readlines()
-    return render(request, "filmreview.html", ctx)
+    film_reviews = searchAllFilmReview()
+    return render(request, "filmreview.html", {'film_reviews':film_reviews})

@@ -24,20 +24,43 @@
         <div class="mybtn" id="btn_3">相册</div>
         <div class="mybtn" id="btn_4">待定</div>
     </div>
-    <div class="center_box_ctx">
-        <tbody>
-            {% for film_review in film_reviews %}
-            <tr>
-                <div style="display: none;">{{ film_review.id }}</div>
-                <td>{{ film_review.title }}</td>
-                <td>{{ film_review.create_time}}</td>
-                <img src="{{ film_review.preview_Img}}" style="height: 312px; width:250px">
-            </tr>
-            {% endfor %}
-        </tbody>
+    <div id="hidden" style="display:none;">
+        {{ rlt }}
     </div>
+    <div class="center_box_ctx">
+        <div class="show_box">
+            <div id="show">
+
+            </div>
+        </div>
+    </div>
+    <form action="/filmreview/post" method="post" class="center_box">
+        {% csrf_token %}
+        <textarea name="content" id="editor">
+				
+			</textarea>
+        <p class="submit_box"><input type="submit" value="Submit" class="submit_btn"></p>
+    </form>
 </body>
 <script type="text/javascript">
+    window.onload = changeLink;
+
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    function changeLink() {
+        var str = document.getElementById('hidden').textContent;
+        str = str.replace('[\'', '');
+        str = str.replace('\']', '');
+        document.getElementById('show').innerHTML = str;
+    }
+
     $("#btn_0").click(function() {
         self.location = "/home";
     })

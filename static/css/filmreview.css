@@ -22,13 +22,6 @@
     box-shadow: 0 0 0.5vh 0.4vh rgb(0, 31, 206);
 }
 
-.center_box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0% 18% 0% 18%;
-}
-
 .show_box {
     background-color: rgba(240, 248, 255, 0.7);
     margin-bottom: 5vh;
@@ -43,4 +36,11 @@
     padding-top: 5vh;
     width: 92%;
     font-weight: 550;
+}
+
+.center_box_ctx {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0% 10% 0% 10%;
 }

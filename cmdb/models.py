@@ -11,5 +11,5 @@ class Article(models.Model):
         ('O','Other')
     ], max_length=20, verbose_name='类别')
     title = models.CharField(max_length=50, verbose_name='标题')
-    preview_Img = models.TextField(default='data:image/jpg;base64,', name='预览图片')
-    content = models.TextField(default='<p>null<p>', name='正文')
+    preview_Img = models.TextField(default='data:image/jpg;base64,', verbose_name='预览图片')
+    content = models.TextField(default='<p>null<p>', verbose_name='正文')
