@@ -1,72 +1,74 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>张鎢睿的博客</title>
-		<script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
-		<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script src="/static/js/jquery-3.4.1.js"></script>
-		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="/static/css/home.css">
-		<link rel="stylesheet" href="/static/css/filmreview.css">
-	</head>
-	<body>
-		<div class="title">
-			<h2 class="name">Zhang Wurui</h2>
-		</div>
-		<div class="btns">
-			<div class="mybtn" id="btn_0">首页</div>
-			<div class="mybtn" id="btn_1">词云</div>
-			<div class="btn_activate" id="btn_2">影评</div>
-			<div class="mybtn" id="btn_3">相册</div>
-			<div class="mybtn" id="btn_4">待定</div>
-		</div>
-		<div id="hidden" style="display:none;">
-			{{ rlt }}
-		</div>
-		<div class="center_box">
-			<div class="show_box">
-				<div id="show">
 
-				</div>
-			</div>
-		</div>
-		<form action="/filmreview/post" method="post" class="center_box">
-			{% csrf_token %}
-			<textarea name="content" id="editor" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>张鎢睿的博客</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/static/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/filmreview.css">
+</head>
+
+<body>
+    <div class="title">
+        <h2 class="name">Zhang Wurui</h2>
+    </div>
+    <div class="btns">
+        <div class="mybtn" id="btn_0">首页</div>
+        <div class="mybtn" id="btn_1">词云</div>
+        <div class="btn_activate" id="btn_2">影评</div>
+        <div class="mybtn" id="btn_3">相册</div>
+        <div class="mybtn" id="btn_4">待定</div>
+    </div>
+    <div id="hidden" style="display:none;">
+        {{ rlt }}
+    </div>
+    <div class="center_box">
+        <div class="show_box">
+            <div id="show">
+
+            </div>
+        </div>
+    </div>
+    <form action="/filmreview/post" method="post" class="center_box">
+        {% csrf_token %}
+        <textarea name="content" id="editor">
 				
 			</textarea>
-			<p class="submit_box"><input type="submit" value="Submit" class="submit_btn"></p>
-		</form>
-		<script>
-			ClassicEditor
-				.create( document.querySelector( '#editor' ) )
-				.then( editor => {
-					console.log( editor );
-				} )
-				.catch( error => {
-					console.error( error );
-				} );
-			function changeLink(){
-				var str = document.getElementById('hidden').textContent;
-				str = str.replace('[\'','');
-				str = str.replace('\']','');
-				document.getElementById('show').innerHTML = str;
-			}
-			window.onload = changeLink;
-		</script>
-	</body>
-	<script type="text/javascript">
-		$("#btn_0").click(function(){
-			self.location = "/home";
-		})
-		$("#btn_1").click(function(){
-			self.location = "/worldcloud";
-		})
-		$("#btn_3").click(function(){
-		})
-		$("#btn_4").click(function(){
-		})
-	</script>
+        <p class="submit_box"><input type="submit" value="Submit" class="submit_btn"></p>
+    </form>
+</body>
+<script type="text/javascript">
+    window.onload = changeLink;
+
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    function changeLink() {
+        var str = document.getElementById('hidden').textContent;
+        str = str.replace('[\'', '');
+        str = str.replace('\']', '');
+        document.getElementById('show').innerHTML = str;
+    }
+
+    $("#btn_0").click(function() {
+        self.location = "/home";
+    })
+    $("#btn_1").click(function() {
+        self.location = "/worldcloud";
+    })
+    $("#btn_3").click(function() {})
+    $("#btn_4").click(function() {})
+</script>
+
 </html>
