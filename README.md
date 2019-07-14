@@ -25,3 +25,8 @@ Sqlite基本操作
 		python manage.py makemigrations
 	将改动同步到数据库:
 		python manage.py migrate
+
+admin后台管理
+
+	创建超级用户:
+		python manage.py createsuperuser
