@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/static/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="/static/css/welcome.css">
+    <title>Welcome To ZhangWurui Blog</title>
+</head>
+
+<body>
+    <div class="dialog">
+        <div id="content_text">这是一个对话框</div>
+        <input type="text" />
+    </div>
+    <canvas id="canvas" class="canvas_bk"></canvas>
+</body>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("canvas")
+        var ctx = canvas.getContext("2d")
+        console.log(ctx)
+        var W = window.innerWidth
+        var H = window.innerHeight
+
+        canvas.height = H
+        canvas.width = W
+
+        var fontSize = 18
+
+        var colums = Math.floor(W / fontSize)
+        var drops = []
+        for (var i = 0; i < colums; i++) {
+            drops.push(0)
+        }
+        var str = "01"
+
+        function draw() {
+            ctx.fillStyle = "rgba(0,0,0,0.05)"
+            ctx.fillRect(0, 0, W, H)
+            ctx.font = fontSize + "px 微软雅黑"
+            ctx.fillStyle = randColor()
+                // ctx.fillStyle = "rgb(0,255,0)"
+
+            for (var i = 0; i < colums; i++) {
+                var index = Math.floor(Math.random() * str.length)
+                var x = i * fontSize
+                var y = drops[i] * fontSize
+                ctx.fillText(str[index], x, y)
+                if (y > canvas.height && Math.random() > 0.99) {
+                    drops[i] = 0
+                }
+                drops[i]++
+            }
+        }
+
+        function randColor() {
+            var r = Math.floor(Math.random() * 256)
+            var g = Math.floor(Math.random() * 256)
+            var b = Math.floor(Math.random() * 256)
+            return "rgb(" + r + "," + g + "," + b + ")"
+        }
+
+        draw()
+        setInterval(draw, 40)
+    }
+
+    $
+</script>
+
+</html>

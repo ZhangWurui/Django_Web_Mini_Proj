@@ -1,0 +1,42 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+}
+
+.canvas_bk {
+    background-color: #111;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.dialog {
+    color: white;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    border: 2px solid white;
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    background: rgba(0, 255, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content_text {
+    font-size: 3vh;
+    margin-bottom: 5%;
+}
+
+input {
+    font-size: 3vh;
+    width: 60%;
+}

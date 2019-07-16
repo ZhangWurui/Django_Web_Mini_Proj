@@ -12,6 +12,9 @@ from cmdb.db_util import *
 #     user_list = models.UserInfo.objects.all()
 #     return render(request, "index.html",{"data":user_list})
 
+def welcome(request):
+    return render(request, "welcome.html")
+
 def home(request):
     return HttpResponseRedirect("/home/")
 

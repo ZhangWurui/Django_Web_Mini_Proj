@@ -20,8 +20,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-    # path('index/', views.index),
-    path('', views.home),
+    path('', views.welcome),
     path('home/', views.goHome),
 
     path('home/worldcloud/', views.worldCloud),
@@ -29,6 +28,5 @@ urlpatterns = [
 
     path('home/filmreview/', views.filmreview),
     path('filmreview/', views.goFilmReview),
-    # path('filmreview/post', handle_post.filmreview_post),
     path('admin/', admin.site.urls),
 ]
