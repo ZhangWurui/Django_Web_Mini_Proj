@@ -20,14 +20,21 @@ def home(request):
     return HttpResponseRedirect("/home/")
 
 def goHome(request):
+    # emotion
+    # 1:optimistic  2:pessimistic 3.neutral
     message = ""
     emotion = ""
     reply = ""
     if request.method == "POST":
         message = request.POST.get("message", None)
-        emotion, reply = judgeEmotion(message)
-        
-    return render(request, "home.html")
+        emotion, replies = judgeEmotion(message)
+        print(emotion)
+        print(replies)
+        if len(replies) > 0:
+            reply = replies[0]
+        else:
+            reply = 'null'
+    return render(request, "home.html", {'emtion':emotion, 'reply':reply})
 
 def worldCloud(request):
     return HttpResponseRedirect("/worldcloud/")

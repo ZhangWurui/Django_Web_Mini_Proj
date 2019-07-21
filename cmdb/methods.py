@@ -15,7 +15,7 @@ def judgeEmotion(message):
     options = {}
     options["scene"] = "talk"
     reponse = client.emotion(text, options)['items'][0]
-    pprint.pprint(reponse)
+    # pprint.pprint(reponse)
     '''
     response:
         {'label': 'optimistic',
@@ -24,9 +24,18 @@ def judgeEmotion(message):
         'subitems': [{'label': 'like', 'prob': 0.976717}]}
     '''
     emotion = reponse['label']
-    reply = reponse['replies']
-    return emotion,reply
+    replies = reponse['replies']
+    emotion_id = 0
+    # 1:optimistic  2:pessimistic   3.neutral
+    if emotion == 'optimistic':
+        emotion_id = 1
+    elif emotion == 'pessimistic':
+        emotion_id =2
+    elif emotion == 'neutral':
+        emotion_id = 3
+    return emotion_id,replies
 
-emotion,reply = judgeEmotion("难受")
-print(emotion)
-print(reply)
+# test
+# emotion,reply = judgeEmotion("难受")
+# print(emotion)
+# print(reply)

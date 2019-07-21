@@ -42,11 +42,11 @@ body {
 
 input {
     font-size: 3vh;
-    width: 60%;
+    width: 40vh;
 }
 
 .welcome_btn {
-    margin-top: 3.5vh;
+    margin-top: 3vh;
     width: 20vh;
     height: 5vh;
     background-color: rgba(45, 0, 243, 0.425);
