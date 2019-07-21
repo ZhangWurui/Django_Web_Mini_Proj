@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from cmdb.db_util import *
+from cmdb.methods import *
 
 # def index(request):
 #     if request.method == "POST":
@@ -19,6 +20,13 @@ def home(request):
     return HttpResponseRedirect("/home/")
 
 def goHome(request):
+    message = ""
+    emotion = ""
+    reply = ""
+    if request.method == "POST":
+        message = request.POST.get("message", None)
+        emotion, reply = judgeEmotion(message)
+        
     return render(request, "home.html")
 
 def worldCloud(request):
