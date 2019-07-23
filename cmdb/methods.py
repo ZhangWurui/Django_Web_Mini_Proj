@@ -25,15 +25,7 @@ def judgeEmotion(message):
     '''
     emotion = reponse['label']
     replies = reponse['replies']
-    emotion_id = 0
-    # 1:optimistic  2:pessimistic   3.neutral
-    if emotion == 'optimistic':
-        emotion_id = 1
-    elif emotion == 'pessimistic':
-        emotion_id =2
-    elif emotion == 'neutral':
-        emotion_id = 3
-    return emotion_id,replies
+    return emotion,replies
 
 # test
 # emotion,reply = judgeEmotion("难受")

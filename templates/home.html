@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <div style="display: none" id="emotion">{{ emotion }}</div>
+    <div style="display: none" id="reply">{{ reply }}</div>
     <div class="title">
         <h2 class="name">Zhang Wurui</h2>
     </div>
@@ -23,10 +25,24 @@
         <div class="mybtn" id="btn_4">待定</div>
     </div>
     <div class="center_box">
-        <text class="welcome_text">这是我的博客</text>
+        <div class="welcome_text">这是我的博客</div>
     </div>
 </body>
 <script type="text/javascript">
+    window.onload = function() {
+        var emotion = $("#emotion").text()
+        var reply = $('#reply').text()
+        if (emotion != '') {
+            var color = 'white'
+                // 1:optimistic  2:pessimistic 3.neutral
+            if (emotion == 'optimistic') {
+                color = 'red'
+            } else if (emotion == 'pessimistic') {
+                color = 'blue'
+            }
+            alert('经过分析，您的心情色是[' + color + ']\n' + reply)
+        }
+    }
     $("#btn_1").click(function() {
         self.location = "/worldcloud";
     })
