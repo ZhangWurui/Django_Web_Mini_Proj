@@ -20,7 +20,7 @@
     </div>
     <div class="btns">
         <div class="btn_activate" id="btn_0">首页</div>
-        <div class="mybtn" id="btn_1">词云</div>
+        <div class="mybtn" id="btn_1">技术</div>
         <div class="mybtn" id="btn_2">影评</div>
         <div class="mybtn" id="btn_3">相册</div>
         <div class="mybtn" id="btn_4">待定</div>
@@ -41,16 +41,16 @@
             } else if (emotion == 'pessimistic') {
                 color = 'blue'
             }
-            alert('经过分析，您的心情色是[' + color + ']\n' + reply)
+            alert('经过分析，您的心情色是 #' + color + '# \n' + reply)
+            localStorage.setItem('color', color)
         }
-        localStorage.setItem('color', color)
         setUserTheme()
     }
     $("#btn_1").click(function() {
-        self.location = "/worldcloud";
+        self.location = "/tech/";
     })
     $("#btn_2").click(function() {
-        self.location = "/filmreview";
+        self.location = "/filmreview/";
     })
     $("#btn_3").click(function() {})
     $("#btn_4").click(function() {})

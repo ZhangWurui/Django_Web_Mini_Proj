@@ -34,14 +34,8 @@ def goHome(request):
         print(reply)
     return render(request, "home.html", {'emotion':emotion, 'reply':reply})
 
-def worldCloud(request):
-    return HttpResponseRedirect("/worldcloud/")
-
-def goWorldCloud(request):
-    return render(request, "worldcloud.html")
-
-def filmreview(request):
-    return HttpResponseRedirect("/filmreview/")
+def goTech(request):
+    return render(request, "tech.html")
 
 def goFilmReview(request):
     film_reviews = searchAllFilmReview()

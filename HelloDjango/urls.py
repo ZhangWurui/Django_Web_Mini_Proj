@@ -23,10 +23,8 @@ urlpatterns = [
     path('', views.welcome),
     path('home/', views.goHome),
 
-    path('home/worldcloud/', views.worldCloud),
-    path('worldcloud/', views.goWorldCloud),
+    path('tech/', views.goTech),
 
-    path('home/filmreview/', views.filmreview),
     path('filmreview/', views.goFilmReview),
     path('admin/', admin.site.urls),
 ]
