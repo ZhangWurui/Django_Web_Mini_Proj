@@ -7,15 +7,16 @@
     <title>张鎢睿的博客</title>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/static/js/jquery-3.4.1.js"></script>
+    <script src="/static/js/myjs.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/home_green.css" id="mycss">
 </head>
 
 <body>
     <div style="display: none" id="emotion">{{ emotion }}</div>
     <div style="display: none" id="reply">{{ reply }}</div>
     <div class="title">
-        <h2 class="name">Zhang Wurui</h2>
+        <h2 class="name" id="name">Zhang Wurui</h2>
     </div>
     <div class="btns">
         <div class="btn_activate" id="btn_0">首页</div>
@@ -32,9 +33,9 @@
     window.onload = function() {
         var emotion = $("#emotion").text()
         var reply = $('#reply').text()
+        var color = 'green'
         if (emotion != '') {
-            var color = 'white'
-                // 1:optimistic  2:pessimistic 3.neutral
+            // 1:optimistic  2:pessimistic 3.neutral
             if (emotion == 'optimistic') {
                 color = 'red'
             } else if (emotion == 'pessimistic') {
@@ -42,6 +43,8 @@
             }
             alert('经过分析，您的心情色是[' + color + ']\n' + reply)
         }
+        localStorage.setItem('color', color)
+        setUserTheme()
     }
     $("#btn_1").click(function() {
         self.location = "/worldcloud";
