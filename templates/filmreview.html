@@ -26,16 +26,15 @@
         <div class="mybtn" id="btn_4">待定</div>
     </div>
     <div class="center_box_ctx">
-        <tbody>
-            {% for film_review in film_reviews %}
-            <tr>
-                <div style="display: none;">{{ film_review.id }}</div>
-                <td>{{ film_review.title }}</td>
-                <td>{{ film_review.create_time}}</td>
-                <img src="{{ film_review.preview_Img}}" style="height: 312px; width:250px">
-            </tr>
-            {% endfor %}
-        </tbody>
+        {% for film_review in film_reviews %}
+        <div class="single_box">
+            <div style="display: none;">{{ film_review.id }}</div>
+            <div class="my_single_title">{{ film_review.title }}</div>
+            <div class="my_single_time">{{ film_review.create_time}}</div>
+            <img src="{{ film_review.preview_Img }}" class="my_single_img">
+        </div>
+        {% endfor %}
+
     </div>
 </body>
 <script type="text/javascript">

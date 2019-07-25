@@ -40,7 +40,31 @@
 
 .center_box_ctx {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0% 10% 0% 10%;
+}
+
+.single_box {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    width: 280px;
+    margin: 10px 10px 10px 10px;
+    background-color: rgba(227, 229, 250, 0.6);
+}
+
+.my_single_img {
+    height: 312px;
+    width: 250px;
+    align-self: center;
+}
+
+.my_single_title {
+    align-self: center;
+    font-size: 20px;
+}
+
+.my_single_time {
+    align-self: center;
 }
