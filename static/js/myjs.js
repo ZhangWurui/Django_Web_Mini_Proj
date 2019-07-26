@@ -1,5 +1,6 @@
 function setUserTheme() {
     var color = localStorage.getItem('color')
+    console.log(color)
     if (color != '') {
         // 1:optimistic  2:pessimistic 3.neutral
         if (color == 'red') {
