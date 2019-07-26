@@ -10,14 +10,16 @@
     flex-direction: column;
     width: 350px;
     margin: 10px 5px 10px 5px;
+    border-radius: 20px;
 }
 
 .single_box_top {
     display: flex;
     flex-direction: column;
-    height: 460px;
+    height: 465px;
     width: 350px;
     background-color: rgba(227, 229, 250, 0.6);
+    border-radius: 20px;
 }
 
 .single_box:hover {
@@ -26,10 +28,11 @@
 }
 
 .single_box_bottom {
-    display: flex;
+    display: none;
     flex-direction: column;
-    width: 350px;
+    width: 250px;
     background-color: rgba(82, 80, 80, 0.6);
+    border: 2px solid rgba(31, 30, 30, 0.3)
 }
 
 .my_single_img {
