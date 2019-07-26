@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0% 13% 0% 13%;
+    margin: 0% 5% 0% 5%;
 }
 
 .single_box {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 250px;
     margin: 10px 5px 10px 5px;
     border-radius: 20px;
 }
@@ -16,28 +16,32 @@
 .single_box_top {
     display: flex;
     flex-direction: column;
-    height: 465px;
-    width: 350px;
+    width: 250px;
     background-color: rgba(227, 229, 250, 0.6);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .single_box:hover {
     box-shadow: 0 0 0.3vh 0.3vh rgb(247, 255, 249);
     font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .single_box_bottom {
-    display: none;
+    align-self: center;
+    margin: 3px 2px 3px 2px;
+    display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 240px;
     background-color: rgba(82, 80, 80, 0.6);
-    border: 2px solid rgba(31, 30, 30, 0.3)
+    border: 2px solid rgba(31, 30, 30, 0.3);
+    border-radius: 10px;
 }
 
 .my_single_img {
-    height: 400px;
-    width: 325px;
+    height: 295px;
+    width: 240px;
     align-self: center;
 }
 
@@ -51,6 +55,7 @@
 }
 
 .my_single_des {
-    padding: 8px 5px 0px 5px;
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
     color: rgb(200, 200, 200);
 }
