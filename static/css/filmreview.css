@@ -42,21 +42,34 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0% 10% 0% 10%;
+    padding: 0% 13% 0% 13%;
 }
 
 .single_box {
     display: flex;
     flex-direction: column;
-    height: 380px;
-    width: 280px;
-    margin: 10px 10px 10px 10px;
+    width: 400px;
+    margin: 10px 5px 10px 5px;
+}
+
+.single_box_top {
+    display: flex;
+    flex-direction: column;
+    height: 465px;
+    width: 350px;
     background-color: rgba(227, 229, 250, 0.6);
 }
 
+.single_box_bottom {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: rgba(82, 80, 80, 0.6);
+}
+
 .my_single_img {
-    height: 312px;
-    width: 250px;
+    height: 400px;
+    width: 325px;
     align-self: center;
 }
 
@@ -67,4 +80,9 @@
 
 .my_single_time {
     align-self: center;
+}
+
+.my_single_des {
+    padding: 8px 5px 0px 5px;
+    color: rgb(200, 200, 200);
 }
