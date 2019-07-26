@@ -26,5 +26,6 @@ urlpatterns = [
     path('tech/', views.goTech),
 
     path('filmreview/', views.goFilmReview),
+    path('filmreviewspeci', views.goFilmReviewSpeci),
     path('admin/', admin.site.urls),
 ]

@@ -28,7 +28,7 @@
     <div class="center_box_ctx">
         {% for film_review in film_reviews %}
         <div class="single_box">
-            <div class="single_box_top">
+            <div class="single_box_top" onclick="goSpeci({{ film_review.id }})">
                 <div style="display: none;">{{ film_review.id }}</div>
                 <div class="my_single_title">{{ film_review.title }}</div>
                 <div class="my_single_time">{{ film_review.create_time}}</div>
@@ -39,28 +39,6 @@
             </div>
         </div>
         {% endfor %}
-        <div class="single_box">
-            <div class="single_box_top">
-                <div style="display: none;">{{ film_review.id }}</div>
-                <div class="my_single_title">{{ film_review.title }}</div>
-                <div class="my_single_time">{{ film_review.create_time}}</div>
-                <img src="{{ film_review.preview_Img }}" class="my_single_img">
-            </div>
-            <div class="single_box_bottom">
-                <div>{{ film_review.preview_des | safe }}</div>
-            </div>
-        </div>
-        <div class="single_box">
-            <div class="single_box_top">
-                <div style="display: none;">{{ film_review.id }}</div>
-                <div class="my_single_title">{{ film_review.title }}</div>
-                <div class="my_single_time">{{ film_review.create_time}}</div>
-                <img src="{{ film_review.preview_Img }}" class="my_single_img">
-            </div>
-            <div class="single_box_bottom">
-                <div>{{ film_review.preview_des | safe }}</div>
-            </div>
-        </div>
     </div>
 </body>
 <script type="text/javascript">
@@ -75,6 +53,10 @@
     })
     $("#btn_3").click(function() {})
     $("#btn_4").click(function() {})
+
+    function goSpeci(id) {
+        self.location = "/filmreviewspeci?id=" + id;
+    }
 </script>
 
 </html>

@@ -40,3 +40,9 @@ def goTech(request):
 def goFilmReview(request):
     film_reviews = searchAllFilmReview()
     return render(request, "filmreview.html", {'film_reviews':film_reviews})
+
+def goFilmReviewSpeci(request):
+    if request.method == "GET":
+        id = request.GET.get("id", 0)
+        film_review = searchFilmReviewById(id)
+    return render(request, "filmreviewspeci.html", {'film_review':film_review})
