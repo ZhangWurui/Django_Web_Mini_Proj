@@ -48,16 +48,21 @@
 .single_box {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 350px;
     margin: 10px 5px 10px 5px;
 }
 
 .single_box_top {
     display: flex;
     flex-direction: column;
-    height: 465px;
+    height: 460px;
     width: 350px;
     background-color: rgba(227, 229, 250, 0.6);
+}
+
+.single_box:hover {
+    box-shadow: 0 0 0.3vh 0.3vh rgb(247, 255, 249);
+    font-weight: bold;
 }
 
 .single_box_bottom {
