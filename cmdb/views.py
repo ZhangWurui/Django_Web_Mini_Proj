@@ -44,5 +44,5 @@ def goFilmReview(request):
 def goFilmReviewSpeci(request):
     if request.method == "GET":
         id = request.GET.get("id", 0)
-        film_review = searchFilmReviewById(id)
+        film_review = searchFilmReviewById(id)[0]
     return render(request, "filmreviewspeci.html", {'film_review':film_review})
