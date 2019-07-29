@@ -21,7 +21,7 @@
     <div class="btns">
         <div class="mybtn" id="btn_0">首页</div>
         <div class="mybtn" id="btn_1">技术</div>
-        <div class="btn_activate" id="btn_2">影评</div>
+        <div class="btn_activate_spec" id="btn_2">影评</div>
         <div class="mybtn" id="btn_3">相册</div>
         <div class="mybtn" id="btn_4">待定</div>
     </div>
@@ -43,6 +43,9 @@
     })
     $("#btn_1").click(function() {
         self.location = "/tech/";
+    })
+    $("#btn_2").click(function() {
+        self.location = "/filmreview/";
     })
     $("#btn_3").click(function() {})
     $("#btn_4").click(function() {})
