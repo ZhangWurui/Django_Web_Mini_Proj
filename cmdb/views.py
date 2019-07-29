@@ -46,3 +46,13 @@ def goFilmReviewSpeci(request):
         id = request.GET.get("id", 0)
         film_review = searchFilmReviewById(id)[0]
     return render(request, "filmreviewspeci.html", {'film_review':film_review})
+
+def goWrite(request):
+    ctx ={'res':'null'}
+    if request.method == "POST":
+        if request.POST:
+            ctx['rlt'] = request.POST['content']
+            with open( 'static/temp/fr_001.txt', mode='w+', encoding='UTF-8') as f_out:
+                f_out.write(ctx['rlt'])
+            ctx['res'] = 'success'
+    return render(request, "write.html", ctx)
