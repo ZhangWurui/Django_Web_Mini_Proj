@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0% 5% 0% 5%;
+    margin: 0% 0% 0% 5%;
 }
 
 .single_box {
     display: flex;
     flex-direction: column;
     width: 250px;
-    margin: 10px 5px 10px 5px;
+    margin: 10px 100px 30px 5px;
     border-radius: 20px;
 }
 
@@ -17,12 +17,13 @@
     display: flex;
     flex-direction: column;
     width: 250px;
+    height: 354px;
     background-color: rgba(227, 229, 250, 0.6);
     border-radius: 10px;
 }
 
 .single_box:hover {
-    box-shadow: 0 0 0.3vh 0.3vh rgb(247, 255, 249);
+    box-shadow: 0 0 5px 4px rgb(247, 255, 249);
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
